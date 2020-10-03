@@ -26,4 +26,4 @@ Run the whole thing on Docker and Nginx: cd to the project root directory and ru
 docker-compose up
 ```
 
-It might take a while to download required docker images and then it will run the containers and you and other users in the local network can access the page on any device. Just type the local IP address in the browser and that's it! 
+It might take a while to download required docker images and then it will run the containers and you and other users in the local network can access the page on any device. Just type the local IP address of your machine in the browser and that's it! 
