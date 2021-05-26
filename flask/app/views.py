@@ -3,16 +3,22 @@ from flask import Flask, render_template, Response
 import os
 import cv2
 
+# paste camera stream url in quotations ("url") or use 0 to use webcam 
+cam_url = os.getenv('CAMERA_STREAM_URL', '0')
+
+
 def process_frame(frame):
     # do the image processing here
     return frame
 
+
 @app.route('/')
 def home():
     return render_template('index.html')
+
+
 def stream():
-    url = 0 # paste camera stream url in quotations ("url") or use 0 to use webcam 
-    cap = cv2.VideoCapture(url)
+    cap = cv2.VideoCapture(cam_url)
     while True:
         cv2.waitKey(1)
         success, frame = cap.read()
@@ -21,7 +27,7 @@ def stream():
             _, buffer = cv2.imencode('.jpg', frame)
             frame = buffer.tobytes()
             yield (b'--frame\r\n'
-                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
 
 @app.route('/live_stream/', methods=["GET"])
