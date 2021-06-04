@@ -27,4 +27,4 @@ docker-compose up
 ```
 **Note**: Make sure you change the `CAMERA_STREAM_URL` in docker compose file under Flask service. Default is 0 but webcams are not accessible from a Docker container out of the box! So an RTSP url is required. 
 
-It might take a while to download required docker images and then it will run the containers and you and other users in the local network can access the page on any device. Just type the local IP address of your machine in the browser and that's it! 
+It might take some time to download required docker images and then it will run the containers and you and other users in the local network can access the page on any device. Just type the local IP address of your machine in the browser and that's it! 
