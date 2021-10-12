@@ -18,7 +18,7 @@ def home():
 
 
 def stream():
-    cap = cv2.VideoCapture(cam_url)
+    cap = cv2.VideoCapture(0)
     while True:
         cv2.waitKey(1)
         success, frame = cap.read()
