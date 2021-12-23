@@ -2,7 +2,7 @@
 Stream IP camera frames in local network using Flask, Docker and OpenCV.
 
 ## Overview
-this is a simple Flask web app run on top of a Docker container. The app also has Nginx configured which lets users in your local network access the app using your local IP address.
+this is a simple Flask web app running on top of a Docker container. The app also has Nginx configured which lets users in your local network access the app using your local IP address.
 
 ## Requirements
 If you want to run the app on docker the only thing you need is Docker-ce and Docker-compose.
